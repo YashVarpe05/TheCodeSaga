@@ -1,1 +1,210 @@
 /* saga  */
+
+.main-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+  flex-direction: column;
+}
+
+.main-container h2 {
+  font-size: 2em;
+  font-family: "Aldrich", sans-serif;
+  margin-bottom: 1%;
+}
+
+.cards-container {
+  width: 100%;
+  max-width: 950px;
+  height: 450px;
+  background-color: #0e1120;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1%;
+  margin-bottom: 4%;
+}
+
+.cards-container .card {
+  height: 320px;
+  width: 220px;
+  background-color: #423d9e;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cards-container h3 {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.cards-container p {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  font-family: "Aldrich", sans-serif;
+}
+
+.cards-container button {
+  height: 45px;
+  width: 154px;
+  background-color: #37bdd2;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.wrapper {
+  /* max-width: 75%; */
+
+  margin: auto;
+  margin-bottom: 3.5rem;
+}
+
+.wrapper > p,
+.wrapper > h1 {
+  margin: 3.5rem 0;
+  text-align: start;
+  font-family: "Aldrich", sans-serif;
+  color: white;
+}
+
+.wrapper > h1 {
+  letter-spacing: 3px;
+}
+
+.accordion {
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  border-bottom: none;
+  transition: all 0.25s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  border-radius: 0;
+}
+
+.accordion.active {
+  color: #2cb685;
+  font-size: 1.25rem;
+}
+
+.panel {
+  padding: 0 2rem 0rem 2rem;
+  background-color: transparent;
+  overflow: hidden;
+  background-color: transparent;
+  transition: max-height 0.25s ease;
+  max-height: 0;
+  border-bottom: 1px solid white;
+}
+
+.panel.active {
+  border-bottom: none;
+}
+
+.panel p {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  margin-bottom: 25px;
+  text-align: left;
+  font-weight: 400;
+}
+.panel li {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.faq {
+  margin: 10px 0;
+}
+
+.accordion .fas {
+  transition: transform 0.25s ease;
+}
+
+.accordion.active .fas.fa-plus {
+  transform: rotate(45deg);
+}
+
+.accordion .fas.fa-minus {
+  transform: rotate(180deg);
+}
+
+.wrapper {
+  width: 930px;
+}
+
+@media screen and (max-width: 1000px) {
+  .main-container {
+    margin-top: 5%;
+  }
+
+  .main-container h2 {
+    font-size: 1.5em;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 4%;
+  }
+
+  .cards-container .card {
+    width: 70%;
+    height: 300px;
+    margin: 5% auto;
+  }
+
+  .cards-container h3 {
+    font-size: 24px;
+  }
+
+  .cards-container p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .cards-container button {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  .wrapper {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+
+  .wrapper > p,
+  .wrapper > h1 {
+    margin: 2rem 0;
+    font-size: 18px;
+  }
+
+  .accordion {
+    font-size: 1rem;
+    padding: 1.5rem 2rem;
+  }
+}
