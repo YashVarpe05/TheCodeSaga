@@ -1,1 +1,33 @@
-/* gallery  */
+#gallery{
+   
+    height: calc(100vh - 12rem);
+    display: grid;
+    place-items: center;
+    margin-inline: 10%;
+    
+}
+.gallery-card{
+    background-color: #423D9E;
+    padding: 4rem;
+    padding-inline: 6rem;
+    border-radius: 15px;
+    display: grid ;
+    gap: 2rem;
+    place-items: center;
+    margin-top: -8rem;
+    text-align: center;
+}
+.gallery-card .gallery-card-cta {
+    width: 100%;
+}
+.gallery-card .gallery-card-cta button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: #2CB685;
+    color: white;
+}
