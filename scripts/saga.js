@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var accordionContainers = document.querySelectorAll(".accordion");
+  var accordionButtons = document.querySelectorAll(".accordion");
 
   function togglePanel(panel) {
     panel.style.maxHeight = panel.style.maxHeight
@@ -8,13 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function toggleIcon(icon) {
-    if (icon.classList.contains("fa-plus")) {
-      icon.classList.remove("fa-plus");
-      icon.classList.add("fa-minus");
-    } else {
-      icon.classList.remove("fa-minus");
-      icon.classList.add("fa-plus");
-    }
+    icon.classList.toggle("fa-plus");
+    icon.classList.toggle("fa-minus");
   }
 
   function closeOtherPanels(clickedPanel) {
@@ -25,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var icon = panel.previousElementSibling.querySelector(".fas");
         icon.classList.remove("fa-minus");
         icon.classList.add("fa-plus");
+        panel.parentElement.classList.remove("active");
       }
     });
   }
@@ -40,13 +36,22 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.remove("active");
     } else {
       closeOtherPanels(panel);
+      panel.parentElement.classList.add("active");
       togglePanel(panel);
       toggleIcon(icon);
       this.classList.add("active");
     }
   }
 
-  accordionContainers.forEach(function (container) {
-    container.addEventListener("click", toggleAccordion);
+  accordionButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      // Remove "active" class from all accordion items
+      accordionButtons.forEach(function (btn) {
+        btn.classList.remove("active");
+      });
+
+      // Toggle accordion for clicked item
+      toggleAccordion.call(this);
+    });
   });
 });
