@@ -4,7 +4,7 @@ html {
     height: 100%;
     font-size: 100%;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
 }
 
 *,
@@ -15,7 +15,15 @@ html {
 }
 
 html::-webkit-scrollbar {
-    width: 0px;
+    width: 5px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: red;
+}
+
+html::-webkit-scrollbar-track {
+    background: aqua;
 }
 
 body {
