@@ -1,1 +1,154 @@
 /* schedule   */
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
+.schedule {
+    text-align: center;
+    font-family: "Aldrich", sans-serif;
+    margin-top: 3rem;
+}
+
+.schedule h1{
+    font-weight: 400;
+}
+
+.schedule p{
+    font-size: x-large;
+    margin: 0.5rem;
+}
+
+.timeline{
+    position: relative;
+    margin: 7rem auto;
+    max-width: 1200px;
+    font-family: "Aldrich", sans-serif;
+    z-index: -1;
+    padding-bottom: 2rem;
+}
+
+.container{
+    padding: 10px 50px;
+    position: relative;
+    width: 40%;
+    left: 50%;
+    margin: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circle{
+    background: white;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    margin-left: -6.8rem;
+    outline: 3px solid #423D9E;
+}
+
+.circle-left{
+    background: white;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    margin-right: -7.2rem;
+    outline: 3px solid #423D9E;
+}
+
+.circle-top{
+    background: #BD34FE;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    margin-left: 48.8%;
+}
+
+.area{
+    padding: 20px 30px;
+    position: relative;
+    border: solid 0.3rem #BD34FE;
+    border-radius: 15px;
+    min-width: 90%;
+}
+
+.area h1{
+    font-weight: 400;
+}
+
+.area p{
+    border-top: 0.2rem solid white;
+    padding-top: 0.4rem;
+    font-size: x-large;
+}
+
+.right-container{
+    left: 50%;
+}
+
+.left-container{
+    margin-left: -2rem;
+    left: 0;
+}
+
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 0.3rem;
+    height: 100%;
+    background: #BD34FE;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+}
+
+@media screen and (max-width: 600px) {
+
+    .schedule{
+        margin-bottom: -3rem;
+    }
+
+    .timeline{
+        margin: 3rem auto;
+    }
+
+    .timeline::after{
+        left: 2rem;
+    }
+
+    .container{
+        width: 100%;
+        padding-left: 5.25rem;
+        padding-right: 25px;
+        max-width: 250px;
+    }
+
+    .left-container {
+        margin-right: 0; 
+        margin-left: auto; 
+        flex-direction: row-reverse;
+        left: 0;
+        position: relative;
+    }
+
+    .right-container{
+        left: 0;
+        
+    }
+
+    .circle-top{
+        margin-left: 1.2rem;
+    }
+
+    .circle-left{
+        margin-right: 21.3rem;
+        position: absolute;
+    }
+
+   .area span{
+    font-size: 20px;
+   }
+
+   .left-container .area{
+        right: 0.3rem;
+   }
+}
