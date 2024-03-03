@@ -1,1 +1,8 @@
-/* home.css  */
+#hero {
+    display: grid;
+    place-items: center;
+}
+
+#hero .hero-container img {
+    width: 70rem;
+}
