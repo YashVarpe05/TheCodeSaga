@@ -1,1 +1,119 @@
 /* faq  */
+
+body {
+  background-image: url("../assets/images/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 40px;
+}
+
+.wrapper {
+  max-width: 75%;
+  margin: auto;
+  margin-bottom: 3.5rem;
+}
+
+.wrapper > p,
+.wrapper > h1 {
+  margin: 3.5rem 0;
+  text-align: start;
+  font-family: "Aldrich", sans-serif;
+  color: white;
+}
+
+.wrapper > h1 {
+  letter-spacing: 3px;
+}
+
+.accordion {
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  border-bottom: none;
+  transition: all 0.25s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  border-radius: 0;
+  text-align: start;
+}
+
+.accordion.active {
+  color: #2cb685;
+  font-size: 1.25rem;
+}
+
+.panel {
+  padding: 0 2rem 0rem 2rem;
+  background-color: transparent;
+  overflow: hidden;
+  background-color: transparent;
+  transition: max-height 0.25s ease;
+  max-height: 0;
+  border-bottom: 1px solid white;
+}
+
+.panel.active {
+  border-bottom: none;
+}
+
+.panel p {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  text-align: start;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.panel li {
+  color: white;
+  margin-bottom: 40px;
+  margin-left: 10px;
+}
+
+.faq {
+  margin: 10px 0;
+}
+
+.faq > button {
+  display: flex;
+  gap: 10px;
+}
+
+.accordion .fas {
+  transition: transform 0.25s ease;
+}
+
+.accordion.active .fas.fa-plus {
+  transform: rotate(45deg);
+}
+
+.accordion .fas.fa-minus {
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 90%;
+  }
+
+  .accordion {
+    padding: 1.5rem 1.5rem;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .panel {
+    padding: 0 1.5rem 0rem 1.5rem;
+    text-align: left;
+  }
+}
