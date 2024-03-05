@@ -32,7 +32,7 @@
 
 .cards-container .card {
   height: 320px;
-  width: 220px;
+  width: 240px;
   background-color: #423d9e;
   border-radius: 15px;
   display: flex;
@@ -55,7 +55,7 @@
 
 .cards-container button {
   height: 45px;
-  width: 154px;
+  width: 160px;
   background-color: #37bdd2;
   color: #ffffff;
   cursor: pointer;
@@ -102,6 +102,7 @@
   font-family: "Inter", sans-serif;
   font-weight: 400;
   border-radius: 0;
+  text-align: start;
 }
 
 .accordion.active {
@@ -128,17 +129,26 @@
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   line-height: 1.2rem;
-  margin-bottom: 25px;
-  text-align: left;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  text-align: start;
   font-weight: 400;
+  margin-bottom: 40px;
 }
+
 .panel li {
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  margin-left: 10px;
 }
 
 .faq {
   margin: 10px 0;
+}
+
+.faq > button {
+  display: flex;
+  gap: 10px;
 }
 
 .accordion .fas {
@@ -206,5 +216,20 @@
   .accordion {
     font-size: 1rem;
     padding: 1.5rem 2rem;
+  }
+
+  .wrapper {
+    max-width: 90%;
+  }
+
+  .accordion {
+    padding: 1.5rem 1.5rem;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .panel {
+    padding: 0 1.5rem 0rem 1.5rem;
+    text-align: left;
   }
 }
