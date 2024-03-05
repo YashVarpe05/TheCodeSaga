@@ -1,8 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap");
 #hero {
-    display: grid;
-    place-items: center;
+	display: grid;
+	place-items: center;
 }
 
 #hero .hero-container img {
-    width: 70rem;
+	width: 70rem;
+	max-width: 100%;
+	height: auto;
+}
+
+#prizes {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+}
+
+.prize-container {
+	display: grid;
+	place-items: center;
+	width: 100%;
+	max-width: 1000px;
+}
+
+#prizes .prize-container .prize-container-title h1 {
+	font-size: 3.8rem;
+	margin: 45px;
+	font-family: "Aldrich", sans-serif;
+	text-transform: uppercase;
+}
+
+.prize-container-layout {
+	display: grid;
+	gap: 2px;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+}
+
+.prize-container-layout .left,
+.prize-container-layout .right1,
+.prize-container-layout .right2 {
+	background-color: #423d9e;
+	border: 2px solid #b55cb5;
+	border-radius: 15px;
+	margin: 10px;
+	width: 100%;
+}
+
+.prize-container-layout .left {
+	grid-area: 1 / 1 / 3 / 2;
+	width: 30rem;
+	height: 29rem;
+}
+
+.prize-container-layout .right1 {
+	grid-area: 1 / 2 / 2 / 3;
+	width: 30rem;
+	height: 15rem;
+}
+
+.prize-container-layout .right2 {
+	grid-area: 2 / 2 / 3 / 3;
+	width: 30rem;
+	height: 12rem;
+}
+
+.prize-container-layout .left .left-title h1,
+.right1 .right1-title h1,
+.right2 .right2-title h1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	font-weight: 400;
+	margin: 25px;
+	font-family: "Aldrich", sans-serif;
+}
+.prize-container-layout .left .left-title h1 {
+	font-size: 3.5rem;
+}
+.prize-container-layout .left {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+.prize-container-layout .left .left-description h1,
+h3,
+.right1 .right1-title h4,
+.right2 .right2-title h4 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 2.3rem;
+	font-family: "Orbitron", sans-serif;
+	font-optical-sizing: auto;
+}
+.prize-container-layout .left .left-description h1,
+.right1 .right1-title h3,
+.right2 .right2-title h3 {
+	filter: drop-shadow(0 0.5rem 0.35rem rgba(255, 255, 255, 0.2));
+}
+
+@media (max-width: 768px) {
+	#hero .hero-container img {
+		width: 100%;
+	}
+
+	.prize-container-layout {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.prize-container-layout .left,
+	.prize-container-layout .right1,
+	.prize-container-layout .right2 {
+		width: calc(100% - 20px);
+		margin: 10px;
+	}
+
+	.prize-container-layout .left,
+	.prize-container-layout .right1,
+	.prize-container-layout .right2 {
+		width: calc(100% - 20px);
+		height: 30vh;
+	}
+
+	.prize-container .prize-container-title h1 {
+		font-size: 2.5rem;
+		margin: 15px;
+	}
+
+	.prize-container-layout .left .left-title h1 {
+		font-size: 2rem;
+		margin: 15px;
+	}
+}
+
+#sponsors {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sponsors-container {
+	display: grid;
+	place-content: center;
+	width: 80%;
+	max-width: 1200px;
+	height: 70vh;
+	border: 3px solid #00a67f;
+	border-radius: 15px;
+}
+.sponsors-container .sponsors-container-title {
+	margin-top: -90px;
+}
+
+.sponsors-container .sponsors-container-tire {
+	border-radius: 15px;
+}
+.sponsors-container .sponsors-container-title h1 {
+	font-family: "Orbitron", sans-serif;
+	font-optical-sizing: auto;
+	font-size: 2.5rem;
+}
+
+.sponsors-container-title {
+	text-align: center;
+}
+
+.sponsors-container-tire {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sponsors-container-tire img {
+	border-radius: 50%;
+	margin: 30px;
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+}
+
+.sponsors-container-tire img:nth-child(2) {
+	margin-top: -45px;
+}
+
+.sponsors-container-description {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sponsors-container-description h1 {
+	font-size: 2rem;
+	margin-top: 15px;
+	font-family: "Orbitron", sans-serif;
+	font-optical-sizing: auto;
+}
+
+@media (max-width: 768px) {
+	.sponsors-container-tire img {
+		border-radius: 50%;
+		margin: 13px;
+		width: 86px;
+		height: 79px;
+		object-fit: cover;
+	}
+}
+
+#team {
+	width: 100%;
+	height: 100vh;
+}
+.team-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 5%;
+}
+.team-title h1 {
+	font-size: 5rem;
+	font-weight: 700;
+	text-transform: capitalize;
+	font-family: "Anybody", sans-serif;
+	font-optical-sizing: auto;
+	color: #bd73ad;
+}
+.team-title span {
+	font-size: 7.6rem;
+	font-weight: 700;
+}
+.slide-content {
+	margin: 0 40px;
+}
+
+.card {
+	/* width: 320px; */
+	width: 202.19px;
+	height: 256.2px;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+
+	background: #d9d9d9;
+}
+
+.slide-container {
+	max-width: 1220px;
+	width: 100%;
+	padding: 40px 0;
+}
+.slide-content {
+	padding: 45px 20px;
+	margin: 0 40px;
+	overflow: hidden;
+}
+
+.image-content,
+.card-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 23px 14px;
+}
+.image-content {
+	position: relative;
+	row-gap: 5px;
+	padding: 25px 0;
+}
+
+.overlay {
+	position: relative;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #4070f4;
+	border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after {
+	content: "";
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	right: 0;
+}
+
+.card-image {
+	position: relative;
+	height: 230px;
+	width: 230px;
+	padding: 3px;
+}
+
+.card-image .card-img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.name {
+	font-size: 18px;
+	font-weight: 500;
+	color: #333;
+}
+
+.team {
+	font-size: 14px;
+	color: #707070;
+	text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+	.slide-content {
+		margin: 0 10px;
+	}
+
+	.swiper-navBtn {
+		display: none;
+	}
+	.team-title h1 {
+		font-size: 1.3rem;
+	}
+	.team-title span {
+		font-size: 1.8rem;
+	}
 }
