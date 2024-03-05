@@ -1,0 +1,43 @@
+/* registration */
+.container{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  max-width: 60%;
+  margin-left: 20%;
+  margin-top: 5rem;
+  gap: 2rem;
+}
+
+#event-title {
+  font-size: 90px;
+  font-weight: bold;
+  
+}
+
+#event-description p {
+    font-size: 16px;
+    left: 50%;
+    margin-left: 5%;
+    margin-top: 2%;
+  }
+
+@media screen and (max-width: 600px){
+  .container{
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-left: 10%;
+    max-width: 80%;
+
+  }
+  #event-title {
+    font-size: 40px;  
+    
+  }
+  #event-description p {
+    font-size: 16px;
+    margin-bottom: 5%;
+    margin-left: 0;
+  }
+}
