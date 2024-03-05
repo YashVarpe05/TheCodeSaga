@@ -1,161 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/favicon.png" />
-    <link rel="stylesheet" href="../styles/resets.css" />
-    <link rel="stylesheet" href="../styles/common.css" />
-    <link rel="stylesheet" href="../styles/saga.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-    />
-    <script src="../scripts/index.js" defer></script>
-    <script src="../scripts/saga.js"></script>
-    <title>The Code Saga | Saga</title>
-  </head>
 
-  <body>
-    <!-- Navbar  -->
-    <header>
-      <nav>
-        <div class="navbar-container">
-          <div class="navbar-container-brand">
-            <img src="../assets/images/logo.svg" alt="The Code Sage" />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/favicon.png" />
+  <link rel="stylesheet" href="../styles/resets.css" />
+  <link rel="stylesheet" href="../styles/common.css" />
+  <link rel="stylesheet" href="../styles/saga.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+  <script src="../scripts/index.js" defer></script>
+  <script src="../scripts/saga.js"></script>
+  <title>The Code Saga | Saga</title>
+</head>
 
-          <div class="navbar-container-links">
-            <ul>
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="schedule.html">Schedule</a>
-              </li>
-              <li>
-                <a href="saga.html">Saga</a>
-              </li>
-              <li>
-                <a href="results.html">Results</a>
-              </li>
-              <li>
-                <a href="faq.html">FAQ</a>
-              </li>
-              <li>
-                <a href="gallery.html">Gallery</a>
-              </li>
-            </ul>
-          </div>
+<body>
+  <!-- Navbar  -->
+  <header>
+    <nav>
+      <div class="navbar-container">
 
-          <div class="navbar-container-cta">
-            <a href="register.html">
-              <button>Register</button>
-            </a>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <div class="main-container">
-        <h2>Saga</h2>
-
-        <div class="quiz-faq">
-          <div class="wrapper">
-            <div class="faq">
-              <button class="accordion">
-                <span class="question-text">Round 1: (Tech Quiz)</span>
-                <i class="fas fa-plus"></i>
-              </button>
-              <div class="panel">
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
-                  sit fugit mollitia.
-                </p>
-              </div>
-            </div>
-
-            <div class="faq">
-              <button class="accordion">
-                <span class="question-text">Round 2: (DSA Problems)</span>
-                <i class="fas fa-plus"></i>
-              </button>
-              <div class="panel">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Excepturi sed dolore quod consequatur?
-                </p>
-              </div>
-            </div>
-
-            <div class="faq">
-              <button class="accordion">
-                <span class="question-text">Round 3: (Mini Project)</span>
-                <i class="fas fa-plus"></i>
-              </button>
-              <div class="panel">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Libero fugiat suscipit odit possimus vero.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="navbar-container-brand">
+          <img src="assets/images/logo.svg" alt="The Code Sage">
         </div>
 
-        <div class="cards-container">
-          <div id="card-one" class="card">
-            <!-- card1 -->
+        <div class="navbar-container-links nav-links">
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="schedule.html">Schedule</a>
+            </li>
+            <li>
+              <a href="saga.html">Saga</a>
+            </li>
+            <li>
+              <a href="results.html">Results</a>
+            </li>
+            <li>
+              <a href="faq.html">FAQ</a>
+            </li>
+            <li>
+              <a href="gallery.html">Gallery</a>
+            </li>
+          </ul>
 
-            <h3>Round 1</h3>
+        </div>
 
-            <p>Tech Quiz</p>
+        <div class="navbar-container-cta">
+          <a href="register.html">
+            <button>Register</button>
+          </a>
+        </div>
 
-            <button disabled>Start</button>
+        <!-- mobile view  -->
+        <div class="navbar-container-hamburger-menu">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+
+        <div class="navbar-mobile-container nav-links">
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="schedule.html">Schedule</a>
+            </li>
+            <li>
+              <a href="saga.html">Saga</a>
+            </li>
+            <li>
+              <a href="results.html">Results</a>
+            </li>
+            <li>
+              <a href="faq.html">FAQ</a>
+            </li>
+            <li>
+              <a href="gallery.html">Gallery</a>
+            </li>
+            <li>
+              <a href="register.html">
+                <button>Register</button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+    <div class="main-container">
+      <h2>Saga</h2>
+
+      <div class="quiz-faq">
+        <div class="wrapper">
+          <div class="faq">
+            <button class="accordion">
+              <span class="question-text">Round 1: (Tech Quiz)</span>
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="panel">
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
+                sit fugit mollitia.
+              </p>
+            </div>
           </div>
 
-          <div id="card-two" class="card">
-            <!-- card2 -->
-
-            <h3>Round 2</h3>
-
-            <p>
-              DSA <br />
-              Problems
-            </p>
-
-            <button disabled>Start</button>
+          <div class="faq">
+            <button class="accordion">
+              <span class="question-text">Round 2: (DSA Problems)</span>
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="panel">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Excepturi sed dolore quod consequatur?
+              </p>
+            </div>
           </div>
 
-          <div id="card-three" class="card">
-            <!-- card3 -->
-
-            <h3>Round 3</h3>
-
-            <p>
-              Mini <br />
-              Project
-            </p>
-
-            <button disabled>Start</button>
+          <div class="faq">
+            <button class="accordion">
+              <span class="question-text">Round 3: (Mini Project)</span>
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="panel">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Libero fugiat suscipit odit possimus vero.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </main>
-  </body>
+
+      <div class="cards-container">
+        <div id="card-one" class="card">
+          <!-- card1 -->
+
+          <h3>Round 1</h3>
+
+          <p>Tech Quiz</p>
+
+          <button disabled>Start</button>
+        </div>
+
+        <div id="card-two" class="card">
+          <!-- card2 -->
+
+          <h3>Round 2</h3>
+
+          <p>
+            DSA <br />
+            Problems
+          </p>
+
+          <button disabled>Start</button>
+        </div>
+
+        <div id="card-three" class="card">
+          <!-- card3 -->
+
+          <h3>Round 3</h3>
+
+          <p>
+            Mini <br />
+            Project
+          </p>
+
+          <button disabled>Start</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
 </html>
