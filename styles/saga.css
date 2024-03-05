@@ -180,6 +180,8 @@
     flex-direction: column;
     height: auto;
     margin-bottom: 4%;
+    background-color: transparent;
+    box-shadow: none;
   }
 
   .cards-container .card {
