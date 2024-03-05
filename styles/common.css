@@ -1,78 +1,192 @@
 body {
-    background: url("../assets/images/bg.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+	background: url("../assets/images/bg.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 header {
-    height: 12rem;
-    display: grid;
-    place-items: center;
+	height: 12rem;
+	display: grid;
+	place-items: center;
 }
 
 nav {
-    height: 8rem;
-    width: 85%;
-    background: #0E1120;
-    border-radius: 15px;
-    display: grid;
-    align-items: center;
-    transition: 1s ease;
-    position: fixed;
-    top: 2.5rem;
+	height: 8rem;
+	width: 85%;
+	background: #0e1120;
+	border-radius: 15px;
+	display: grid;
+	align-items: center;
+	transition: 1s ease;
+	position: fixed;
+	top: 2.5rem;
+	z-index: 1;
 }
 
 nav .navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-inline: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-inline: 2rem;
 }
 
 nav .navbar-container-brand img {
-    width: 5rem;
+	width: 5rem;
 }
 
 nav .navbar-container-links ul {
-    display: flex;
-    gap: 4rem;
+	display: flex;
+	gap: 4rem;
 }
 
 nav .navbar-container-links li a {
-    font-size: 1.2rem;
-    transition: 0.3s ease;
+	font-size: 1.2rem;
+	transition: 0.3s ease;
 }
 
 nav .navbar-container-links li a:hover {
-    color: #2CB685;
-    font-weight: 700;
+	color: #2cb685;
+	font-weight: 700;
 }
 
-nav .navbar-container-links li a.active {
-    font-weight: 700;
-    color: #2CB685;
+.nav-links li a.active {
+	font-weight: 700;
+	color: #2cb685;
 }
 
 nav .navbar-container-cta button {
-    background: #2CB685;
-    color: white;
-    padding-inline: 2.5rem;
-    border-radius: 100px;
-    transition: 0.3s ease;
+	background: #2cb685;
+	color: white;
+	padding-inline: 2.5rem;
+	border-radius: 100px;
+	transition: 0.3s ease;
 }
 
 nav .navbar-container-cta button:hover {
-    cursor: pointer;
-    background: transparent;
-    outline: 2px solid #2CB685;
+	cursor: pointer;
+	background: transparent;
+	outline: 2px solid #2cb685;
+}
+
+nav .navbar-container-hamburger-menu {
+	cursor: pointer;
+	display: none;
+}
+
+nav .navbar-container-hamburger-menu {
+	cursor: pointer;
+	display: none;
 }
 
 /* Navbar Sticky */
 nav.sticky {
-    border-radius: 0;
-    width: 100%;
-    height: 8rem;
-    margin-top: -2.5rem;
+	border-radius: 0;
+	width: 100%;
+	height: 8rem;
+	margin-top: -2.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+	nav .navbar-container-links ul {
+		gap: 2.5rem;
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	nav .navbar-container-links,
+	.navbar-container-cta {
+		display: none;
+	}
+
+	header {
+		height: 8rem;
+	}
+
+	nav {
+		height: 6rem;
+		top: 1.5rem;
+		width: 90%;
+	}
+
+	nav.sticky {
+		height: 6rem;
+		margin-top: -1.5rem;
+	}
+
+	nav .navbar-container-hamburger-menu {
+		display: inline-block;
+	}
+}
+
+/* Navbar Mobiel View  */
+.navbar-mobile-container {
+	background: #0e1120;
+	width: 100%;
+	position: absolute;
+	top: 6rem;
+	left: 0;
+	border-radius: 15px;
+
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.navbar-mobile-container ul {
+	padding-inline: 1rem;
+}
+
+.navbar-mobile-container ul li {
+	padding: 1rem;
+	cursor: pointer;
+	border-radius: 8px;
+}
+
+.navbar-mobile-container ul li:not(:is(:has(button))):hover {
+	background: #48388d;
+}
+
+.navbar-mobile-container ul li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color: inherit;
+}
+
+.navbar-mobile-container ul li a:hover {
+	background: #48388d;
+}
+
+.navbar-mobile-container ul li a button {
+	width: 100%;
+	background: #2cb685;
+	color: white;
+}
+
+.navbar-container-hamburger-menu .bar1,
+.bar2,
+.bar3 {
+	width: 35px;
+	height: 5px;
+	background: white;
+	margin: 6px 0;
+	transition: 0.4s;
+	border-radius: 100px;
+}
+
+.toggle .bar1 {
+	transform: translate(0, 11px) rotate(-45deg);
+}
+
+.toggle .bar2 {
+	opacity: 0;
+}
+
+.toggle .bar3 {
+	transform: translate(0, -11px) rotate(45deg);
 }
