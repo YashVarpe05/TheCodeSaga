@@ -128,11 +128,48 @@
 
 #sponsors .sponsors-container {
 	border: 2px solid #2CB685;
-	padding: 2rem;
+	padding: 2.5rem;
 	border-radius: 15px;
+	height: 75vh;
+	overflow-y: auto;
 }
 
 .sponsors-container-companies-title h1 {
-	font-size: 1.5rem;
+	font-size: 4rem;
 	font-family: 'Orbitron', sans-serif;
+	text-align: center;
+}
+
+.sponsors-container-companies-wrapper {
+	margin-top: 2rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	place-items: center;
+	width: 100%;
+	gap: 5rem;
+}
+
+.sponsors-container-companies-wrapper div {
+	height: 10rem;
+	width: 100%;
+	display: grid;
+	place-items: center;
+	gap: 1rem;
+}
+
+.sponsors-container-companies-wrapper div h1 {
+	color: gold;
+	text-transform: uppercase;
+	font-size: 2rem;
+}
+
+.sponsors-container-companies-wrapper div h2 {
+	color: silver;
+	text-transform: uppercase;
+}
+
+.sponsors-container-companies-wrapper div img {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
 }
