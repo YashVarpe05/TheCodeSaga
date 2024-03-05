@@ -8,17 +8,25 @@ window.onload = () => {
   // set active page indicator 
   (() => {
     const activePage = window.location.pathname.replace('/pages', '');
-    const navLinks = document.querySelectorAll('.navbar-container-links ul li a');
+    const navLinks = document.querySelectorAll('.nav-links ul li a');
     for (let i = 0; i < navLinks.length; i++) {
       const link = navLinks[i];
       if (link.href == '/') {
         link.classList.add('active')
-        break
-      } else if (link.href.includes(`${activePage}`)) {
+      } else if (link.href.replace('/pages' && window.location.origin, '') == activePage) {
         link.classList.add('active')
-        break
       }
     }
   })();
+
+  // toggle nav menu 
+  (() => {
+    const menuIcon = document.querySelector('.navbar-container-hamburger-menu');
+    const container = document.querySelector('.navbar-mobile-container');
+    menuIcon.addEventListener('click', () => {
+      menuIcon.classList.toggle('toggle')
+      container.classList.toggle('show')
+    })
+  })()
 
 }
