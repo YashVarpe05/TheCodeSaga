@@ -13,9 +13,7 @@ window.onload = () => {
 			const link = navLinks[i];
 			if (link.href == "/") {
 				link.classList.add("active");
-			} else if (
-				link.href.replace("/pages" && window.location.origin, "") == activePage
-			) {
+			} else if (link.href.replace(window.location.origin + '/pages', "") == activePage) {
 				link.classList.add("active");
 			}
 		}
