@@ -14,7 +14,7 @@ window.onload = () => {
 			if (link.href == "/") {
 				link.classList.add("active");
 			} else if (link.href.replace(window.location.origin + '/pages', "") == activePage) {
-				link.classList.add("active");
+				link.classList.add("active");	
 			}
 		}
 	})();
