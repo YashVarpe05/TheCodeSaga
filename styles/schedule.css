@@ -37,6 +37,13 @@
     align-items: center;
 }
 
+.left-container{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: -2rem;
+    left: 0;
+}
+
 .circle{
     background: white;
     height: 1.5rem;
@@ -85,11 +92,6 @@
     left: 50%;
 }
 
-.left-container{
-    margin-left: -2rem;
-    left: 0;
-}
-
 .timeline::after{
     content: '';
     position: absolute;
@@ -123,16 +125,14 @@
     }
 
     .left-container {
-        margin-right: 0; 
-        margin-left: auto; 
-        flex-direction: row-reverse;
+        margin-left: 12%; 
+        flex-direction: row;
         left: 0;
         position: relative;
     }
 
     .right-container{
         left: 0;
-        
     }
 
     .circle-top{
@@ -140,15 +140,12 @@
     }
 
     .circle-left{
-        margin-right: 21.3rem;
-        position: absolute;
+       margin-left: -45%;
+       left: 0;
     }
 
    .area span{
     font-size: 20px;
    }
 
-   .left-container .area{
-        right: 0.3rem;
-   }
 }
