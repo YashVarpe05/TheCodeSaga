@@ -11,10 +11,10 @@ window.onload = () => {
 		const navLinks = document.querySelectorAll(".nav-links ul li a");
 		for (let i = 0; i < navLinks.length; i++) {
 			const link = navLinks[i];
-			if (link.href == "/") {
+			if (link.href.replace(window.location.origin, "") == activePage) {
 				link.classList.add("active");
 			} else if (link.href.replace(window.location.origin + '/pages', "") == activePage) {
-				link.classList.add("active");	
+				link.classList.add("active");
 			}
 		}
 	})();

@@ -3,351 +3,173 @@
 @import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&display=swap");
 
+
+#home {
+	display: grid;
+	gap: 6rem;
+}
+
+/* hero section  */
 #hero {
 	display: grid;
 	place-items: center;
 }
 
-#hero .hero-container img {
-	width: 70rem;
-	max-width: 100%;
-	height: auto;
-}
-
-#prizes {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+#hero .hero-container {
 	width: 100%;
-	height: 100vh;
-}
-
-.prize-container {
 	display: grid;
 	place-items: center;
-	width: 100%;
-	max-width: 1000px;
 }
 
-#prizes .prize-container .prize-container-title h1 {
-	font-size: 3.8rem;
-	margin: 45px;
-	font-family: "Aldrich", sans-serif;
+#hero .hero-container img#hero-illustration-desktop {
+	width: 80%;
+}
+
+#hero .hero-container img#hero-illustration-mobile {
+	width: 100%;
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	#hero .hero-container img#hero-illustration-mobile {
+		display: block;
+	}
+
+	#hero .hero-container img#hero-illustration-desktop {
+		display: none;
+	}
+}
+
+/* prizes section  */
+
+#prizes {
+	margin-inline: 15%;
+}
+
+#prizes .prizes-container {
+	text-align: center;
+	display: grid;
+	gap: 2rem;
+}
+
+#prizes .prizes-container .prizes-container-title h1 {
+	font-size: 4rem;
+	font-family: 'Aldrich', sans-serif;
 	text-transform: uppercase;
 }
 
-.prize-container-layout {
+#prizes .prizes-card-container {
 	display: grid;
-	gap: 2px;
-	grid-template-rows: 1fr;
 	grid-template-columns: 1fr 1fr;
-	justify-items: center;
-	align-items: center;
+	gap: 1rem;
 }
 
-.prize-container-layout .left,
-.prize-container-layout .right1,
-.prize-container-layout .right2 {
-	background-color: #423d9e;
-	border: 2px solid #b55cb5;
+#prizes .prizes-card-container .card {
+	display: grid;
+	place-items: center;
+	background: #423D9E;
+	border: 2px solid #B55CB5;
+	box-shadow: 1px 1px 15px rgba(255, 255, 255, .20);
+	color: white;
 	border-radius: 15px;
-	margin: 10px;
-	width: 100%;
+	padding: 2rem;
+	gap: 2rem;
+	position: relative;
 }
 
-.prize-container-layout .left {
+#prizes .prizes-card-container .prizes-card-container-winner {
 	grid-area: 1 / 1 / 3 / 2;
-	width: 30rem;
-	height: 29rem;
 }
 
-.prize-container-layout .right1 {
-	grid-area: 1 / 2 / 2 / 3;
-	width: 30rem;
-	height: 15rem;
+#prizes .prizes-card-container .prizes-card-container-winner .card-prize-amount h1 {
+	font-size: 4rem;
 }
 
-.prize-container-layout .right2 {
-	grid-area: 2 / 2 / 3 / 3;
-	width: 30rem;
-	height: 12rem;
-}
-
-.prize-container-layout .left .left-title h1,
-.right1 .right1-title h1,
-.right2 .right2-title h1 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 2rem;
-	font-weight: 400;
-	margin: 25px;
-	font-family: "Aldrich", sans-serif;
-}
-.prize-container-layout .left .left-title h1 {
+#prizes .prizes-card-container .prizes-card-container-runnerup-1 .card-prize-amount h1 {
 	font-size: 3.5rem;
 }
-.prize-container-layout .left {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: center;
-}
-.prize-container-layout .left .left-description h1,
-h3,
-.right1 .right1-title h4,
-.right2 .right2-title h4 {
-	display: flex;
-	align-items: center;
-	justify-content: center;
 
-	font-size: 2.3rem;
-	font-family: "Orbitron", sans-serif;
-	font-optical-sizing: auto;
-}
-.prize-container-layout .left .left-description h1,
-.right1 .right1-title h3,
-.right2 .right2-title h3 {
-	filter: drop-shadow(0 0.5rem 0.35rem rgba(255, 255, 255, 0.2));
-}
-
-@media (max-width: 768px) {
-	#hero .hero-container img {
-		width: 100%;
-	}
-
-	.prize-container-layout {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.prize-container-layout .left,
-	.prize-container-layout .right1,
-	.prize-container-layout .right2 {
-		width: calc(100% - 20px);
-		margin: 10px;
-	}
-
-	.prize-container-layout .left,
-	.prize-container-layout .right1,
-	.prize-container-layout .right2 {
-		width: calc(100% - 20px);
-		height: 30vh;
-	}
-
-	.prize-container .prize-container-title h1 {
-		font-size: 2.5rem;
-		margin: 15px;
-	}
-
-	.prize-container-layout .left .left-title h1 {
-		font-size: 2rem;
-		margin: 15px;
-	}
-}
-
-#sponsors {
-	width: 100%;
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.sponsors-container {
-	display: grid;
-	place-content: center;
-	width: 80%;
-	max-width: 1200px;
-	height: 70vh;
-	border: 3px solid #00a67f;
-	border-radius: 15px;
-}
-.sponsors-container .sponsors-container-title {
-	margin-top: -90px;
-}
-
-.sponsors-container .sponsors-container-tire {
-	border-radius: 15px;
-}
-.sponsors-container .sponsors-container-title h1 {
-	font-family: "Orbitron", sans-serif;
-	font-optical-sizing: auto;
+#prizes .prizes-card-container .prizes-card-container-runnerup-1 .card-prize-amount h1 {
 	font-size: 2.5rem;
 }
 
-.sponsors-container-title {
-	text-align: center;
-}
-
-.sponsors-container-tire {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.sponsors-container-tire img {
-	border-radius: 50%;
-	margin: 30px;
-	width: 150px;
-	height: 150px;
-	object-fit: cover;
-}
-
-.sponsors-container-tire img:nth-child(2) {
-	margin-top: -45px;
-}
-
-.sponsors-container-description {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.sponsors-container-description h1 {
-	font-size: 2rem;
-	margin-top: 15px;
-	font-family: "Orbitron", sans-serif;
-	font-optical-sizing: auto;
-}
-
-@media (max-width: 768px) {
-	.sponsors-container-tire img {
-		border-radius: 50%;
-		margin: 13px;
-		width: 86px;
-		height: 79px;
-		object-fit: cover;
-	}
-}
-
-#team {
-	width: 100%;
-	height: 100vh;
-}
-
-.team-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	margin-top: 5%;
-}
-
-.team-title {
-	margin-bottom: 5%;
-}
-
-.team-title h1 {
-	font-size: 5rem;
-	font-weight: 700;
-	text-transform: capitalize;
-	font-family: "Anybody", sans-serif;
-	font-optical-sizing: auto;
-	color: #bd73ad;
-}
-
-.team-title span {
-	font-size: 7.6rem;
-	font-weight: 700;
-}
-
-.slide-container {
-	display: flex;
-
-	width: 85%;
-	margin: 0 120px;
-	overflow: hidden;
-}
-
-.card {
-	background: #d9d9d9;
-	border-radius: 8px;
-}
-
-.image-box {
-	width: 250px;
-	height: 200px;
-}
-
-.card .image-box img {
-	width: 100%;
-	height: 100%;
-	border-radius: 8px;
-	object-fit: cover;
-}
-
-.card .image-box {
-	padding: 25px;
-}
-
-.card {
-	height: 300px;
-}
-
-.card .profile-details {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	/* column-gap: 12px; */
-	padding: 30px;
-}
-
-.profile-details .name {
+#prizes .prizes-card-container .card .card-title {
 	font-size: 1.5rem;
-	font-weight: 600;
-	color: #232323;
-	font-family: "Inter", sans-serif;
-	font-optical-sizing: auto;
+	font-family: 'Aldrich', sans-serif;
+	text-transform: uppercase;
+	text-align: left;
+	top: 2rem;
+	left: 2rem;
+	position: absolute;
 }
 
-.profile-details .job {
-	font-size: 1rem;
-	font-family: "Inter", sans-serif;
-	font-optical-sizing: auto;
-	color: #444444;
+#prizes .prizes-card-container .card .card-prize-amount {
+	font-size: 1.5rem;
+	font-family: 'Orbitron', sans-serif;
+	padding-block: 5rem;
+}
+
+@media screen and (max-width: 1080px) {
+	#prizes .prizes-card-container {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#prizes {
+		margin-inline: 5%;
+	}
+}
+
+/* sponsors sectin  */
+#sponsors {
+	margin-inline: 10%;
+}
+
+#sponsors .sponsors-container {
+	border: 2px solid #2CB685;
+	padding: 2.5rem;
+	border-radius: 15px;
+	height: 75vh;
+	overflow-y: auto;
+}
+
+.sponsors-container-companies-title h1 {
+	font-size: 4rem;
+	font-family: 'Orbitron', sans-serif;
 	text-align: center;
 }
 
-.swiper-navBtn {
-	color: #000;
-	height: 40px;
-	width: 40px;
+.sponsors-container-companies-wrapper {
+	margin-top: 2rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	place-items: center;
+	width: 100%;
+	gap: 5rem;
 }
 
-.swiper-navBtn::before,
-.swiper-navBtn::after {
-	font-size: 18px;
+.sponsors-container-companies-wrapper div {
+	height: 10rem;
+	width: 100%;
+	display: grid;
+	place-items: center;
+	gap: 1rem;
 }
 
-.swiper-pagination-bullet {
-	background-color: #000;
+.sponsors-container-companies-wrapper div h1 {
+	color: gold;
+	text-transform: uppercase;
+	font-size: 2rem;
 }
 
-@media (max-width: 1077px) {
-	.team-title h1 {
-		font-size: 3.6rem;
-	}
-
-	.team-title span {
-		font-size: 4.5rem;
-	}
-
-	.image-box {
-		height: 165px;
-	}
+.sponsors-container-companies-wrapper div h2 {
+	color: silver;
+	text-transform: uppercase;
 }
 
-@media screen and (max-width: 768px) {
-	.swiper-navBtn {
-		display: none;
-	}
-
-	.team-title h1 {
-		font-size: 1.7rem;
-	}
-
-	.team-title span {
-		font-size: 1.8rem;
-	}
+.sponsors-container-companies-wrapper div img {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
 }
