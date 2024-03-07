@@ -121,7 +121,26 @@
 	}
 }
 
-/* sponsors sectin  */
+/* video section  */
+#promo-video {
+	margin-inline: 10%;
+	height: 40rem;
+}
+
+#promo-video iframe {
+	border: none;
+	border-radius: 15px;
+	box-shadow: 1px 1px 25px rgba(255, 255, 255, .25);
+}
+
+@media screen and (max-width: 600px) {
+	#promo-video {
+		margin-inline: 5%;
+		height: 20rem;
+	}
+}
+
+/* sponsors section  */
 #sponsors {
 	margin-inline: 10%;
 }
