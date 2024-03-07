@@ -118,10 +118,20 @@
     }
 
     .container{
+        word-wrap: break-word;
         width: 100%;
         padding-left: 5.25rem;
         padding-right: 25px;
         max-width: 250px;
+        font-size: 50%;
+    }
+
+    .container p{
+        font-size: 50%;
+    }
+
+    .container span{
+        font-size: 10%;
     }
 
     .left-container {
@@ -129,14 +139,16 @@
         flex-direction: row;
         left: 0;
         position: relative;
+        word-wrap: break-word;
     }
 
     .right-container{
         left: 0;
+        word-wrap: break-word;
     }
 
     .circle-top{
-        margin-left: 1.2rem;
+        margin-left: 1.2rem;    
     }
 
     .circle-left{
@@ -144,8 +156,32 @@
        left: 0;
     }
 
-   .area span{
-    font-size: 20px;
+   .area p{
+    font-size: 13px;
    }
 
 }
+
+@media screen and (max-width:325px) {
+    .circle-left{
+        margin-left: -36%;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .circle-left{
+        margin-left: -42%;
+    }
+}
+
+@media screen and (min-width: 380px) and (max-width: 400px) {
+    .circle-left{
+        margin-left: -43%;
+    }
+  }
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+    .circle-left{
+        margin-left: -50%;
+    }
+  }
