@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="styles/common.css">
   <link rel="stylesheet" href="styles/home.css">
   <script src="scripts/index.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <title>The Code Saga</title>
 </head>
 
@@ -17,11 +19,12 @@
   <header>
     <nav>
       <div class="navbar-container">
+
         <div class="navbar-container-brand">
-          <img src="assets/images/logo.svg" alt="The Code Sage">
+          <img src="/assets/images/logo.svg" alt="The Code Sage">
         </div>
 
-        <div class="navbar-container-links">
+        <div class="navbar-container-links nav-links">
           <ul>
             <li>
               <a href="/">Home</a>
@@ -42,6 +45,7 @@
               <a href="pages/gallery.html">Gallery</a>
             </li>
           </ul>
+
         </div>
 
         <div class="navbar-container-cta">
@@ -49,22 +53,148 @@
             <button>Register</button>
           </a>
         </div>
+
+        <!-- mobile view  -->
+        <div class="navbar-container-hamburger-menu">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+
+        <div class="navbar-mobile-container nav-links">
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="pages/schedule.html">Schedule</a>
+            </li>
+            <li>
+              <a href="pages/saga.html">Saga</a>
+            </li>
+            <li>
+              <a href="pages/results.html">Results</a>
+            </li>
+            <li>
+              <a href="pages/faq.html">FAQ</a>
+            </li>
+            <li>
+              <a href="pages/gallery.html">Gallery</a>
+            </li>
+            <li>
+              <a href="pages/register.html">
+                <button>Register</button>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
+
     </nav>
   </header>
 
-  <section id="hero">
-    <div class="hero-container">
-      <img src="./assets/images/hero-illustration.svg" alt="">
-    </div>
-  </section>
+  <div id="home">
+    <!-- hero section  -->
+    <section id="hero">
+      <div class="hero-container">
+        <img id="hero-illustration-desktop" src="./assets/images/hero-illustration.svg" alt="The Code Saga">
+        <img id="hero-illustration-mobile" src="/assets/images/hero-illustration-mobile.svg" alt="The Code Saga">
+      </div>
+    </section>
 
-  <section id="prizes"></section>
-  
-  <section id="sponsors"></section>
+    <!-- prizes section  -->
+    <section id="prizes">
+      <div class="prizes-container">
+        <div class="prizes-container-title">
+          <h1>Prizes</h1>
+        </div>
+        <div class="prizes-card-container">
+          <div class="prizes-card-container-winner card">
+            <div class="card-title">
+              <h1>Winner</h1>
+            </div>
+            <div class="card-prize-amount">
+              <h1>INR 10,000</h1>
+              <h2>Cash Prize</h2>
+              <h1>+</h1>
+              <h2>Kahitari mentorship vagere</h2>
+            </div>
+          </div>
 
-  <section id="team"></section>
+          <div class="prizes-card-container-runnerup-1 card">
+            <div class="card-title">
+              <h1>1st Runner Up</h1>
+            </div>
+            <div class="card-prize-amount">
+              <h1>INR 5,000</h1>
+              <h2>Cash Prize</h2>
+            </div>
+          </div>
 
+          <div class="prizes-card-container-runnerup-2 card">
+            <div class="card-title">
+              <h1>2nd Runner Up</h1>
+            </div>
+            <div class="card-prize-amount">
+              <h1>INR 2,000</h1>
+              <h2>Cash Prize</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section  -->
+    <section id="promo-video">
+      <iframe src="https://drive.google.com/file/d/1s_d5ykOWysYmjOwwLeN4QIxJ8NYljIUL/preview" width="100%" height="100%"
+        allow="autoplay" allowfullscreen></iframe>
+    </section>
+
+    <!-- sponsors section  -->
+    <section id="sponsors">
+      <div class="sponsors-container">
+        <div class="sponsors-container-companies">
+          <div class="sponsors-container-companies-title">
+            <h1>Sponsors</h1>
+          </div>
+          <div class="sponsors-container-companies-wrapper">
+            <div>
+              <img src="https://1000logos.net/wp-content/uploads/2022/10/Noodles-and-Company-logo.png" alt="">
+              <h2>Silver Sponsor</h2>
+            </div>
+            <div>
+              <img src="https://1000logos.net/wp-content/uploads/2022/10/Noodles-and-Company-logo.png" alt="">
+              <h1>Gold Sponsor</h1>
+            </div>
+            <div>
+              <img src="https://1000logos.net/wp-content/uploads/2022/10/Noodles-and-Company-logo.png" alt="">
+              <h2>Silver Sponsor</h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="sponsors-container-cafeteria">
+          <div class="sponsors-container-cafeteria-title">
+            <h1>Cafeteria</h1>
+          </div>
+          <div class="sponsors-container-cafeteria-wrapper">
+            <div>
+              <img src="https://1000logos.net/wp-content/uploads/2022/10/Noodles-and-Company-logo.png" alt="">
+              <h2>Silver Sponsor</h2>
+            </div>
+            <div>
+              <img src="https://1000logos.net/wp-content/uploads/2022/10/Noodles-and-Company-logo.png" alt="">
+              <h1>Gold Sponsor</h1>
+            </div>
+            <div>
+              <img src="https://1000logos.net/wp-content/uploads/2022/10/Noodles-and-Company-logo.png" alt="">
+              <h2>Silver Sponsor</h2>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+  </div>
 </body>
 
 </html>

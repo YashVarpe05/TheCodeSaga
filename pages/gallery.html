@@ -1,78 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=5"
-    />
-    <link rel="icon" type="image/x-icon" href="/favicon.png" />
-    <link rel="stylesheet" href="../styles/resets.css" />
-    <link rel="stylesheet" href="../styles/common.css" />
-    <link rel="stylesheet" href="../styles/gallery.css" />
-    <script src="../scripts/index.js" defer></script>
-    <title>The Code Saga | Gallery</title>
-  </head>
 
-  <body>
-    <!-- Navbar  -->
-    <header>
-      <nav>
-        <div class="navbar-container">
-          <div class="navbar-container-brand">
-            <img src="../assets/images/logo.svg" alt="The Code Sage" />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <link rel="icon" type="image/x-icon" href="/favicon.png" />
+  <link rel="stylesheet" href="../styles/resets.css" />
+  <link rel="stylesheet" href="../styles/common.css" />
+  <link rel="stylesheet" href="../styles/gallery.css" />
+  <script src="../scripts/index.js" defer></script>
+  <title>The Code Saga | Gallery</title>
+</head>
 
-          <div class="navbar-container-links">
-            <ul>
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="schedule.html">Schedule</a>
-              </li>
-              <li>
-                <a href="saga.html">Saga</a>
-              </li>
-              <li>
-                <a href="results.html">Results</a>
-              </li>
-              <li>
-                <a href="faq.html">FAQ</a>
-              </li>
-              <li>
-                <a href="gallery.html">Gallery</a>
-              </li>
-            </ul>
-          </div>
+<body>
+  <!-- Navbar  -->
+  <header>
+    <nav>
+      <div class="navbar-container">
 
-          <div class="navbar-container-cta">
-            <a href="register.html">
-              <button>Register</button>
-            </a>
-          </div>
+        <div class="navbar-container-brand">
+          <img src="/assets/images/logo.svg" alt="The Code Sage">
         </div>
-      </nav>
-    </header>
 
-    <!-- gallery -->
-    <section id="gallery">
-      <div class="gallery-card">
-        <div class="gallery-card-icon">
-          <img src="../assets/images/drivelogo.svg" alt="Google Drive" />
+        <div class="navbar-container-links nav-links">
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="schedule.html">Schedule</a>
+            </li>
+            <li>
+              <a href="saga.html">Saga</a>
+            </li>
+            <li>
+              <a href="results.html">Results</a>
+            </li>
+            <li>
+              <a href="faq.html">FAQ</a>
+            </li>
+            <li>
+              <a href="gallery.html">Gallery</a>
+            </li>
+          </ul>
+
         </div>
-        <div class="gallery-card-description">
-          <span>Get all the photos and videos from the event</span>
-        </div>
-        <div class="gallery-card-cta">
-          <a href="https://thesudoersclub.github.io" target="_blank">
-            <button>
-              Go to Drive
-              <img src="../assets/images/redirect.svg" alt="redirect" />
-            </button>
+
+        <div class="navbar-container-cta">
+          <a href="register.html">
+            <button>Register</button>
           </a>
         </div>
+
+        <!-- mobile view  -->
+        <div class="navbar-container-hamburger-menu">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+
+        <div class="navbar-mobile-container nav-links">
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="schedule.html">Schedule</a>
+            </li>
+            <li>
+              <a href="saga.html">Saga</a>
+            </li>
+            <li>
+              <a href="results.html">Results</a>
+            </li>
+            <li>
+              <a href="faq.html">FAQ</a>
+            </li>
+            <li>
+              <a href="gallery.html">Gallery</a>
+            </li>
+            <li>
+              <a href="register.html">
+                <button>Register</button>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </section>
-  </body>
+
+    </nav>
+  </header>
+
+  <!-- gallery -->
+  <section id="gallery">
+    <div class="gallery-card">
+      <div class="gallery-card-icon">
+        <img src="../assets/images/drivelogo.svg" alt="Google Drive" />
+      </div>
+      <div class="gallery-card-description">
+        <span>Get all the photos and videos from the event</span>
+      </div>
+      <div class="gallery-card-cta">
+        <a href="https://thesudoersclub.github.io" target="_blank">
+          <button>
+            Go to Drive
+            <img src="../assets/images/redirect.svg" alt="redirect" />
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
+</body>
+
 </html>

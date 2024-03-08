@@ -1,8 +1,194 @@
-#hero {
-    display: grid;
-    place-items: center;
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&display=swap");
+
+
+#home {
+	display: grid;
+	gap: 6rem;
 }
 
-#hero .hero-container img {
-    width: 70rem;
+/* hero section  */
+#hero {
+	display: grid;
+	place-items: center;
+}
+
+#hero .hero-container {
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+
+#hero .hero-container img#hero-illustration-desktop {
+	width: 80%;
+}
+
+#hero .hero-container img#hero-illustration-mobile {
+	width: 100%;
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	#hero .hero-container img#hero-illustration-mobile {
+		display: block;
+	}
+
+	#hero .hero-container img#hero-illustration-desktop {
+		display: none;
+	}
+}
+
+/* prizes section  */
+
+#prizes {
+	margin-inline: 15%;
+}
+
+#prizes .prizes-container {
+	text-align: center;
+	display: grid;
+	gap: 2rem;
+}
+
+#prizes .prizes-container .prizes-container-title h1 {
+	font-size: 4rem;
+	font-family: 'Aldrich', sans-serif;
+	text-transform: uppercase;
+}
+
+#prizes .prizes-card-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+}
+
+#prizes .prizes-card-container .card {
+	display: grid;
+	place-items: center;
+	background: #423D9E;
+	border: 2px solid #B55CB5;
+	box-shadow: 1px 1px 15px rgba(255, 255, 255, .20);
+	color: white;
+	border-radius: 15px;
+	padding: 2rem;
+	gap: 2rem;
+	position: relative;
+}
+
+#prizes .prizes-card-container .prizes-card-container-winner {
+	grid-area: 1 / 1 / 3 / 2;
+}
+
+#prizes .prizes-card-container .prizes-card-container-winner .card-prize-amount h1 {
+	font-size: 4rem;
+}
+
+#prizes .prizes-card-container .prizes-card-container-runnerup-1 .card-prize-amount h1 {
+	font-size: 3.5rem;
+}
+
+#prizes .prizes-card-container .prizes-card-container-runnerup-1 .card-prize-amount h1 {
+	font-size: 2.5rem;
+}
+
+#prizes .prizes-card-container .card .card-title {
+	font-size: 1.5rem;
+	font-family: 'Aldrich', sans-serif;
+	text-transform: uppercase;
+	text-align: left;
+	top: 2rem;
+	left: 2rem;
+	position: absolute;
+}
+
+#prizes .prizes-card-container .card .card-prize-amount {
+	font-size: 1.5rem;
+	font-family: 'Orbitron', sans-serif;
+	padding-block: 5rem;
+}
+
+@media screen and (max-width: 1080px) {
+	#prizes .prizes-card-container {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#prizes {
+		margin-inline: 5%;
+	}
+}
+
+/* video section  */
+#promo-video {
+	margin-inline: 10%;
+	height: 40rem;
+}
+
+#promo-video iframe {
+	border: none;
+	border-radius: 15px;
+	box-shadow: 1px 1px 25px rgba(255, 255, 255, .25);
+}
+
+@media screen and (max-width: 600px) {
+	#promo-video {
+		margin-inline: 5%;
+		height: 20rem;
+	}
+}
+
+/* sponsors section  */
+#sponsors {
+	margin-inline: 10%;
+}
+
+#sponsors .sponsors-container {
+	border: 2px solid #2CB685;
+	padding: 2.5rem;
+	border-radius: 15px;
+	height: 75vh;
+	overflow-y: auto;
+}
+
+.sponsors-container-companies-title h1 {
+	font-size: 4rem;
+	font-family: 'Orbitron', sans-serif;
+	text-align: center;
+}
+
+.sponsors-container-companies-wrapper {
+	margin-top: 2rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	place-items: center;
+	width: 100%;
+	gap: 5rem;
+}
+
+.sponsors-container-companies-wrapper div {
+	height: 10rem;
+	width: 100%;
+	display: grid;
+	place-items: center;
+	gap: 1rem;
+}
+
+.sponsors-container-companies-wrapper div h1 {
+	color: gold;
+	text-transform: uppercase;
+	font-size: 2rem;
+}
+
+.sponsors-container-companies-wrapper div h2 {
+	color: silver;
+	text-transform: uppercase;
+}
+
+.sponsors-container-companies-wrapper div img {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
 }
