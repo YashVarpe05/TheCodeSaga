@@ -149,11 +149,13 @@
 	border: 2px solid #2CB685;
 	padding: 2.5rem;
 	border-radius: 15px;
-	height: 75vh;
+	height: calc(100vh - 15rem);
 	overflow-y: auto;
+	display: grid;
+	gap: 4rem;
 }
 
-.sponsors-container-companies-title h1 {
+.sponsors-container .sponsor-title h1 {
 	font-size: 4rem;
 	font-family: 'Orbitron', sans-serif;
 	text-align: center;
@@ -162,33 +164,91 @@
 .sponsors-container-companies-wrapper {
 	margin-top: 2rem;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	/* grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); */
+	grid-template-columns: repeat(2, 1fr);
 	place-items: center;
 	width: 100%;
-	gap: 5rem;
+	gap: 4rem;
 }
 
 .sponsors-container-companies-wrapper div {
-	height: 10rem;
 	width: 100%;
 	display: grid;
 	place-items: center;
 	gap: 1rem;
+	text-align: center;
 }
 
-.sponsors-container-companies-wrapper div h1 {
+.sponsors-container-companies-wrapper div h1#platinum-sponsor {
+	color: #E5E4E2;
+	text-transform: uppercase;
+	font-size: 2rem;
+}
+
+.sponsors-container-companies-wrapper div h1#gold-sponsor {
 	color: gold;
 	text-transform: uppercase;
 	font-size: 2rem;
 }
 
-.sponsors-container-companies-wrapper div h2 {
+.sponsors-container-companies-wrapper div h1.silver-sponsor {
 	color: silver;
 	text-transform: uppercase;
+	font-size: 1.8rem;
 }
 
 .sponsors-container-companies-wrapper div img {
-	height: 100%;
+	width: 50%;
+}
+
+.sponsors-container-cafeteria-wrapper {
+	margin-top: 2rem;
+	display: grid;
+	/* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+	grid-template-columns: repeat(4, 1fr);
 	width: 100%;
-	object-fit: contain;
+	gap: 2rem;
+}
+
+.sponsors-container-cafeteria-wrapper div {
+	margin-top: 1rem;
+	display: grid;
+	place-items: center;
+	gap: 1rem;
+}
+
+.sponsors-container-cafeteria-wrapper div img {
+	width: 80%;
+}
+
+@media screen and (max-width: 1080px) {
+	.sponsors-container-companies-wrapper {
+		grid-template-columns: 1fr;
+	}
+
+	.sponsors-container-cafeteria-wrapper {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#sponsors {
+		margin-inline: 5%;
+	}
+
+	.sponsors-container-cafeteria-wrapper {
+		grid-template-columns: 1fr;
+	}
+
+	.sponsors-container .sponsor-title h1 {
+		font-size: 3rem;
+	}
+
+	.sponsors-container-companies-wrapper div h1 {
+		font: .8rem;
+	}
+}
+
+#sponsors {
+	margin-bottom: 5rem;
 }
