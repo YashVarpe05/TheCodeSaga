@@ -215,6 +215,7 @@
 	display: grid;
 	place-items: center;
 	gap: 1rem;
+	text-align: center;
 }
 
 .sponsors-container-cafeteria-wrapper div img {
@@ -236,10 +237,6 @@
 		margin-inline: 5%;
 	}
 
-	.sponsors-container-cafeteria-wrapper {
-		grid-template-columns: 1fr;
-	}
-
 	.sponsors-container .sponsor-title h1 {
 		font-size: 3rem;
 	}
@@ -249,6 +246,77 @@
 	}
 }
 
-#sponsors {
-	margin-bottom: 5rem;
+.modal {
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	border-radius: 15px;
+	background: #423D9E;
+	border: none;
+	outline: none;
+	padding: 2.5rem;
+	color: white;
+	width: 22rem;
+}
+
+@media screen and (max-width: 600px) {
+	.modal {
+		width: 70%;
+	}
+}
+
+.modal-container {
+	display: grid;
+	gap: 2rem;
+	position: relative;
+}
+
+.modal-container-close {
+	position: absolute;
+	top: -1.5rem;
+	right: -1.5rem;
+}
+
+.modal-container-close img {
+	filter: invert(1);
+	width: 2rem;
+}
+
+.modal-container-title {
+	text-align: center;
+}
+
+.modal-container-image {
+	height: 15rem;
+	width: 100%;
+	background: whitesmoke;
+}
+
+.modal-container-image img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.modal-container-address {
+	display: flex;
+	gap: 1rem;
+}
+
+.modal-container-address img {
+	width: 1rem;
+}
+
+.modal-container-contact {
+	display: flex;
+	gap: 1rem;
+}
+
+.modal-container-contact img {
+	width: 1rem;
+}
+
+
+dialog::backdrop {
+	background: rgba(0, 0, 0, .5);
 }
