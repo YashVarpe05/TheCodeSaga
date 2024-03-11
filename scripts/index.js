@@ -12,7 +12,9 @@ window.addEventListener("scroll", () => {
 		const link = navLinks[i];
 		if (link.href.replace(window.location.origin, "") == activePage) {
 			link.classList.add("active");
-		} else if (link.href.replace(window.location.origin + '/pages', "") == activePage) {
+		} else if (
+			link.href.replace(window.location.origin + "/pages", "") == activePage
+		) {
 			link.classList.add("active");
 		}
 	}
@@ -31,30 +33,62 @@ window.addEventListener("scroll", () => {
 // trigger open modal event listener
 (async () => {
 	const foodSponsors = document.querySelectorAll(".food-sponsor");
-	const modal = document.querySelector('[food-brand-modal]');
-	const modalCloseBtn = document.querySelector('[food-brand-close-modal]');
+	const modal = document.querySelector("[food-brand-modal]");
+	const modalCloseBtn = document.querySelector("[food-brand-close-modal]");
 
-	const res = await fetch('/scripts/sponsors.json');
-	const sponsorsData = await res.json()
+	const res = await fetch("/scripts/sponsors.json");
+	const sponsorsData = await res.json();
 
-	const brandName = modal.querySelector('.modal-container-title h1');
-	const brandImage = modal.querySelector('.modal-container-image img');
-	const brandAddress = modal.querySelector('.modal-container-address-text p')
-	const brandContact = modal.querySelector('.modal-container-contact-text p')
+	const brandName = modal.querySelector(".modal-container-title h1");
+	const brandImage = modal.querySelector(".modal-container-image img");
+	const brandAddress = modal.querySelector(".modal-container-address-text p");
+	const brandContact = modal.querySelector(".modal-container-contact-text p");
 
 	foodSponsors.forEach((sponsor) => {
-		sponsor.addEventListener('click', async (clicked) => {
-			const clickedSponsor = sponsorsData.find(e => e.brand == clicked.target.nextElementSibling.innerText);
+		sponsor.addEventListener("click", async (clicked) => {
+			const clickedSponsor = sponsorsData.find(
+				(e) => e.brand == clicked.target.nextElementSibling.innerText
+			);
 
 			brandName.innerText = clickedSponsor.brand;
-			brandImage.src = clickedSponsor.image
-			brandAddress.innerText = clickedSponsor.address
-			brandContact.innerText = clickedSponsor.contact.map((e) => e).join(' / ')
+			brandImage.src = clickedSponsor.image;
+			brandAddress.innerText = clickedSponsor.address;
+			brandContact.innerText = clickedSponsor.contact.map((e) => e).join(" / ");
 
 			await modal.showModal();
-			modalCloseBtn.addEventListener('click', (e) => {
-				modal.close()
-			})
+			modalCloseBtn.addEventListener("click", (e) => {
+				modal.close();
+			});
 		});
+	});
+})();
+
+// slider
+(function () {
+	"use strict";
+
+	const mySwiper = new Swiper(".swiper-container", {
+		loop: true,
+
+		slidesPerView: "auto",
+		centeredSlides: true,
+
+		a11y: true,
+		keyboardControl: true,
+		grabCursor: true,
+
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: false,
+		},
+
+		speed: 1500,
+		// pagination
+		pagination: ".swiper-pagination",
+		paginationClickable: true,
+
+		// navigation arrows
+		nextButton: ".swiper-button-next",
+		prevButton: ".swiper-button-prev",
 	});
 })();

@@ -3,7 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&display=swap");
 
-
 #home {
 	display: grid;
 	gap: 6rem;
@@ -54,7 +53,7 @@
 
 #prizes .prizes-container .prizes-container-title h1 {
 	font-size: 4rem;
-	font-family: 'Aldrich', sans-serif;
+	font-family: "Aldrich", sans-serif;
 	text-transform: uppercase;
 }
 
@@ -67,9 +66,9 @@
 #prizes .prizes-card-container .card {
 	display: grid;
 	place-items: center;
-	background: #423D9E;
-	border: 2px solid #B55CB5;
-	box-shadow: 1px 1px 15px rgba(255, 255, 255, .20);
+	background: #423d9e;
+	border: 2px solid #b55cb5;
+	box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.2);
 	color: white;
 	border-radius: 15px;
 	padding: 2rem;
@@ -81,21 +80,33 @@
 	grid-area: 1 / 1 / 3 / 2;
 }
 
-#prizes .prizes-card-container .prizes-card-container-winner .card-prize-amount h1 {
+#prizes
+	.prizes-card-container
+	.prizes-card-container-winner
+	.card-prize-amount
+	h1 {
 	font-size: 4rem;
 }
 
-#prizes .prizes-card-container .prizes-card-container-runnerup-1 .card-prize-amount h1 {
+#prizes
+	.prizes-card-container
+	.prizes-card-container-runnerup-1
+	.card-prize-amount
+	h1 {
 	font-size: 3.5rem;
 }
 
-#prizes .prizes-card-container .prizes-card-container-runnerup-1 .card-prize-amount h1 {
+#prizes
+	.prizes-card-container
+	.prizes-card-container-runnerup-1
+	.card-prize-amount
+	h1 {
 	font-size: 2.5rem;
 }
 
 #prizes .prizes-card-container .card .card-title {
 	font-size: 1.5rem;
-	font-family: 'Aldrich', sans-serif;
+	font-family: "Aldrich", sans-serif;
 	text-transform: uppercase;
 	text-align: left;
 	top: 2rem;
@@ -105,7 +116,7 @@
 
 #prizes .prizes-card-container .card .card-prize-amount {
 	font-size: 1.5rem;
-	font-family: 'Orbitron', sans-serif;
+	font-family: "Orbitron", sans-serif;
 	padding-block: 5rem;
 }
 
@@ -130,7 +141,7 @@
 #promo-video iframe {
 	border: none;
 	border-radius: 15px;
-	box-shadow: 1px 1px 25px rgba(255, 255, 255, .25);
+	box-shadow: 1px 1px 25px rgba(255, 255, 255, 0.25);
 }
 
 @media screen and (max-width: 600px) {
@@ -146,7 +157,7 @@
 }
 
 #sponsors .sponsors-container {
-	border: 2px solid #2CB685;
+	border: 2px solid #2cb685;
 	padding: 2.5rem;
 	border-radius: 15px;
 	height: calc(100vh - 15rem);
@@ -157,7 +168,7 @@
 
 .sponsors-container .sponsor-title h1 {
 	font-size: 4rem;
-	font-family: 'Orbitron', sans-serif;
+	font-family: "Orbitron", sans-serif;
 	text-align: center;
 }
 
@@ -180,7 +191,7 @@
 }
 
 .sponsors-container-companies-wrapper div h1#platinum-sponsor {
-	color: #E5E4E2;
+	color: #e5e4e2;
 	text-transform: uppercase;
 	font-size: 2rem;
 }
@@ -242,7 +253,7 @@
 	}
 
 	.sponsors-container-companies-wrapper div h1 {
-		font: .8rem;
+		font: 0.8rem;
 	}
 }
 
@@ -251,7 +262,7 @@
 	left: 50%;
 	translate: -50% -50%;
 	border-radius: 15px;
-	background: #423D9E;
+	background: #423d9e;
 	border: none;
 	outline: none;
 	padding: 2.5rem;
@@ -316,7 +327,237 @@
 	width: 1rem;
 }
 
-
 dialog::backdrop {
-	background: rgba(0, 0, 0, .5);
+	background: rgba(0, 0, 0, 0.5);
+}
+
+#team {
+	overflow: hidden;
+	width: 100%;
+	margin-top: 10%;
+	height: 80vh;
+}
+
+.team-title h1 {
+	font-size: 5rem;
+	font-weight: 700;
+	text-transform: capitalize;
+	font-family: "Anybody", sans-serif;
+	font-optical-sizing: auto;
+	text-align: center;
+	color: #bd73ad;
+}
+
+.team-title span {
+	font-size: 7.6rem;
+	font-weight: 700;
+}
+
+.team-title span:hover {
+	color: #e5e4e2;
+	transition: 0.4s ease-in-out;
+	transform: scale(1.2);
+	cursor: pointer;
+}
+
+@media (min-width: 37.5em) {
+	body {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+.swiper-container {
+	margin-top: 5em;
+}
+
+.swiper-wrapper {
+	margin-bottom: 3em;
+
+	width: 73.8%;
+}
+
+@media (min-width: 37.5em) {
+	.swiper-wrapper {
+		width: 92%;
+	}
+}
+
+@media (min-width: 43.75em) {
+	.swiper-wrapper {
+		width: 95%;
+	}
+}
+
+.swiper-slide.swiper-slide {
+	width: 100%;
+}
+
+@media (min-width: 37.5em) {
+	.swiper-slide.swiper-slide {
+		width: 50%;
+
+		transform: translateX(-50%);
+	}
+}
+
+@media (min-width: 43.75em) {
+	.swiper-slide.swiper-slide {
+		width: 33.33333333333%;
+		transform: translateX(-100%);
+	}
+}
+
+@media (min-width: 53em) {
+	.swiper-slide.swiper-slide {
+		width: 25%;
+		transform: translateX(-150%);
+	}
+}
+
+.swiper-pagination {
+	display: block;
+}
+
+@media (min-width: 37.5em) {
+	.swiper-pagination {
+		display: none;
+	}
+}
+
+.swiper-button-prev {
+	display: none;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	margin-top: 0;
+	height: calc(100% - 3em);
+	color: #b55cb5 !important;
+	opacity: 0;
+}
+
+@media (min-width: 37.5em) {
+	.swiper-button-prev {
+		display: block;
+	}
+}
+
+.swiper-button-next {
+	display: none;
+	right: 0;
+	top: 0;
+	margin-top: 0;
+	height: calc(100% - 3em);
+	color: #b55cb5 !important;
+	opacity: 0;
+}
+
+@media (min-width: 37.5em) {
+	.swiper-button-next {
+		display: block;
+	}
+}
+.product {
+	margin-left: auto;
+	margin-right: auto;
+	width: 85%;
+	background-color: #fff;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	border-radius: 0 25px 0 25px;
+	flex-direction: column;
+	clip-path: polygon(
+		0 0,
+		90% 0%,
+		100% 9%,
+		100% 80%,
+		100% 100%,
+		10% 100%,
+		0% 90%,
+		0% 80%
+	);
+}
+
+.photograph {
+	display: block;
+	width: 70%;
+
+	object-fit: cover;
+	margin-top: 9%;
+}
+
+.product__name.product__name {
+	font-size: calc(2em + 5vw);
+	font-weight: 600;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 10%;
+	color: #000;
+}
+
+@media (min-width: 37.5em) {
+	.product__name.product__name {
+		font-size: 1.2em;
+	}
+}
+
+.product__description {
+	font-size: calc(0.3em + 5vw);
+	font-weight: 300;
+	line-height: 1.1;
+	text-align: center;
+	margin-bottom: 8%;
+	color: #444444;
+}
+
+@media (min-width: 37.5em) {
+	.product__description {
+		font-size: 0.92em;
+	}
+}
+
+.left-arrow {
+	top: 370% !important;
+	left: 23% !important;
+}
+
+.right-arrow {
+	top: 370% !important;
+	right: 23% !important;
+}
+
+.swiper-slider {
+	padding: 20%;
+	background-color: #fff;
+}
+
+@media (max-width: 1162px) {
+	.team-title h1 {
+		font-size: 2.4rem;
+	}
+	.team-title span {
+		font-size: 3.8rem;
+	}
+}
+
+@media (max-width: 526px) {
+	.swiper-pagination {
+		position: relative !important;
+		text-align: center;
+	}
+	.team-title h1 {
+		font-size: 1.5rem;
+	}
+	.team-title span {
+		font-size: 2.4rem;
+	}
+
+	.product__name.product__name {
+		font-size: 2em;
+	}
+
+	.product__description {
+		font-size: 1.4em;
+	}
 }
